@@ -13,6 +13,7 @@
 ## Browser reader
 
 Serve this repository with Node.js and open `http://127.0.0.1:4181/`.
+The hosted reader is available at <https://hevangel.github.io/digital_design/>.
 
 ```sh
 node scripts/serve.mjs
