@@ -9,10 +9,10 @@ module seq1011 (
     always_comb begin
         next_state = S0;
         case (state)
-            S0:   next_state = din ? S1 : S0;
-            S1:   next_state = din ? S1 : S10;
-            S10:  next_state = din ? S101 : S0;
-            S101: next_state = din ? S1 : S10;
+            S0:   begin if (din) next_state = S1;   else next_state = S0;   end
+            S1:   begin if (din) next_state = S1;   else next_state = S10;  end
+            S10:  begin if (din) next_state = S101; else next_state = S0;   end
+            S101: begin if (din) next_state = S1;   else next_state = S10;  end
             default: next_state = S0;
         endcase
     end
