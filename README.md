@@ -1,2 +1,41 @@
-# digital_design
-Digital Design by Morris Mano in SystemVerilog and VHDL
+# Digital Design — Mano, across six editions
+
+**Original study companion** to M. Morris Mano's *Digital Design* (editions 1–3) and Mano/Ciletti (editions 4–6). This is an independent learning project, **not** a reproduction of the textbooks, their exercise solutions, diagrams, or publisher HDL.
+
+## Start here
+
+1. [Edition-by-edition additions, omissions, and reorganization](editions/README.md), with [machine-readable history](editions/changes.csv) and [source links](editions/SOURCES.md).
+2. [Concept notes](notes/README.md): common curriculum plus historically important topics no longer presented as standalone chapters.
+3. [HDL example index](examples/README.md): **paired SystemVerilog and VHDL** implementing the same specifications.
+4. [Running tests](tests/README.md): self-checking simulations (Icarus Verilog and GHDL), plus source-only checks where toolchains are unavailable.
+
+## Curriculum
+
+| Topic | Original notes | Representative implementation |
+|---|---|---|
+| Binary arithmetic, codes | [01](notes/01-number-systems.md) | BCD-to-Excess-3 |
+| Boolean algebra and gates | [02](notes/02-boolean-algebra.md) | Majority voter |
+| Minimization and hazards | [03](notes/03-minimization.md) | Minimized function |
+| Combinational modules | [04](notes/04-combinational.md) | Adder/subtractor, mux |
+| Synchronous state machines | [05](notes/05-sequential.md) | Overlapping sequence detector |
+| Registers/counters | [06](notes/06-registers.md) | Enable/load counter, shift register |
+| Memory/programmable logic | [07](notes/07-memory.md) | Synchronous RAM, parity |
+| RTL/datapath-controller | [08](notes/08-rtl.md) | Iterative multiplier |
+| Historical asynchronous design | [09](notes/09-asynchronous.md) | SR latch (illustrative) |
+| Historical IC logic families | [10](notes/10-logic-families.md) | Open-drain modelling guidance |
+| Laboratories and symbols | [11](notes/11-labs-symbols.md) | Self-checking labs and diagrams |
+
+This is a **concept-level study companion covering the themes of all six editions**, not a claim that every individual end-of-chapter exercise or subsection has been independently recreated. The shared RTL is intentionally modern even when teaching ideas from 1984: SystemVerilog and VHDL were not languages present in the first editions.
+
+## Design rules
+
+- Every example specifies widths, reset, latency, and intended synthesizability.
+- Each HDL pair implements the same externally observable behavior.
+- IEEE `std_logic_1164` and `numeric_std` for VHDL; synthesizable SV subset with `always_comb` / `always_ff`.
+- X/Z semantics, latches, physical timing, and vendor primitives are **not** interchangeable with Boolean equations.
+- Tests are original and separate from the source RTL; no proprietary exercise answers or reproduced textbook pages.
+- Treat edition changes as documented deltas **only where sources support them**, distinguishing a missing standalone chapter from a completely deleted subject.
+
+## License and attribution
+
+This repository keeps its existing [LICENSE](LICENSE). The authors' book titles and editions are used for identification. Notes, designs, and tests are independently authored. No claim of Pearson endorsement.

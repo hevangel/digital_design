@@ -1,0 +1,19 @@
+from,to,topic,change,detail,evidence,confidence
+1,2,overall,revise,"Eight chapters substantially revised; unspecified obsolete material removed",e2,verified
+1,2,graphic_symbols,add,"New standalone ANSI/IEEE 91-1984 graphic-symbol chapter",e2,verified
+1,2,exercises_labs,expand,"New early-chapter problems and Chapter 11 experiments",e2,verified
+2,3,verilog_hdl,add,"Nine Verilog HDL sections distributed throughout",e3,verified
+2,3,combinational_logic,reorganize,"Consolidated into one chapter",e3,verified
+2,3,sequential_logic,emphasis,"D flip-flops emphasized over JK/SR",e3,verified
+2,3,memory_programmable_logic,reorganize,"Combined in one chapter",e3,verified
+2,3,rtl_design,rewrite,"Chapter 8 largely new RTL presentation",e3,verified
+2,3,laboratory,expand,"Additional HDL experiments in Chapter 11",e3,verified
+3,4,asynchronous_logic,retained,"Standalone chapter 9 present in 4th; introduction date unverified",e4,inferred-toc
+3,4,digital_ic_families,retained,"Standalone chapter 10 present in 4th; introduction date unverified",e4,inferred-toc
+4,5,asynchronous_logic,remove-standalone,"Standalone chapter 9 in fourth is absent from fifth TOC",e4+e5,inferred-toc
+4,5,digital_ic_families,remove-standalone,"Standalone chapter 10 in fourth is absent from fifth TOC",e4+e5,inferred-toc
+4,5,labs,renumber,"Labs move from chapter 11 to chapter 9",e4+e5,inferred-toc
+4,5,graphic_symbols,renumber,"Graphic-symbol chapter moves from 12 to 10",e4+e5,inferred-toc
+5,6,hdl_languages,expand,"Publisher specifies Verilog plus VHDL plus SystemVerilog tracks",e6-us,verified
+5,6,rtl_chapter_8_13,replace-heading,"Other Language Features -> System Verilog—An Introduction",e5+e6-us,inferred-toc
+5,6,core_curriculum,retain,"Core 1–8 and lab/symbol chapters remain",e5+e6-us,inferred-toc
