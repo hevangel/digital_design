@@ -1,0 +1,75 @@
+{
+  "documents": [
+    {
+      "title": "Start here",
+      "open": true,
+      "files": {
+        "README.md": "Overview",
+        "review/edition-coverage.md": "Edition coverage review",
+        "tests/README.md": "Running the tests"
+      }
+    },
+    {
+      "title": "Edition guides",
+      "files": {
+        "editions/README.md": "Edition history",
+        "editions/01-1984.md": "1st edition · 1984",
+        "editions/02-1991.md": "2nd edition · 1991",
+        "editions/03-2002.md": "3rd edition · 2002",
+        "editions/04-2007.md": "4th edition · 2007",
+        "editions/05-2013.md": "5th edition · 2013",
+        "editions/06-2017.md": "6th edition",
+        "editions/SOURCES.md": "Source ledger"
+      }
+    },
+    {
+      "title": "Study notes",
+      "open": true,
+      "files": {
+        "notes/README.md": "Study sequence",
+        "notes/01-number-systems.md": "01 · Numbers and codes",
+        "notes/02-boolean-algebra.md": "02 · Boolean algebra",
+        "notes/03-minimization.md": "03 · Minimization",
+        "notes/04-combinational.md": "04 · Combinational logic",
+        "notes/05-sequential.md": "05 · Synchronous design",
+        "notes/06-registers.md": "06 · Registers and counters",
+        "notes/07-memory.md": "07 · Memory and programmable logic",
+        "notes/08-rtl.md": "08 · Register-transfer design",
+        "notes/09-asynchronous.md": "09 · Asynchronous circuits",
+        "notes/10-logic-families.md": "10 · Digital ICs",
+        "notes/11-labs-symbols.md": "11 · Labs and symbols"
+      }
+    }
+  ],
+  "hdl": [
+    {
+      "title": "HDL examples",
+      "directory": "examples",
+      "index": "Example index",
+      "files": {
+        "bcd_excess3": "BCD to Excess-3",
+        "majority3": "Three-input majority",
+        "kmap_consensus": "K-map consensus",
+        "add_sub4": "4-bit adder / subtractor",
+        "mux4": "4-to-1 multiplexer",
+        "sevenseg_bcd": "Seven-segment decoder",
+        "seq1011": "Overlapping sequence detector",
+        "load_counter": "Loadable counter",
+        "shift8": "Shift register",
+        "sync_ram16x8": "Synchronous RAM",
+        "even_parity": "Even parity",
+        "iter_mult4": "Iterative multiplier",
+        "sr_nand_latch": "NAND SR latch",
+        "open_drain": "Open-drain model"
+      }
+    },
+    {
+      "title": "Testbenches",
+      "directory": "tests",
+      "files": {
+        "tb_combinational": "Combinational testbench",
+        "tb_sequential": "Sequential testbench"
+      }
+    }
+  ]
+}

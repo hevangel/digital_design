@@ -1,19 +1,52 @@
 from,to,topic,change,detail,evidence,confidence
-1,2,overall,revise,"Eight chapters substantially revised; unspecified obsolete material removed",e2,verified
-1,2,graphic_symbols,add,"New standalone ANSI/IEEE 91-1984 graphic-symbol chapter",e2,verified
-1,2,exercises_labs,expand,"New early-chapter problems and Chapter 11 experiments",e2,verified
-2,3,verilog_hdl,add,"Nine Verilog HDL sections distributed throughout",e3,verified
-2,3,combinational_logic,reorganize,"Consolidated into one chapter",e3,verified
-2,3,sequential_logic,emphasis,"D flip-flops emphasized over JK/SR",e3,verified
-2,3,memory_programmable_logic,reorganize,"Combined in one chapter",e3,verified
-2,3,rtl_design,rewrite,"Chapter 8 largely new RTL presentation",e3,verified
-2,3,laboratory,expand,"Additional HDL experiments in Chapter 11",e3,verified
-3,4,asynchronous_logic,retained,"Standalone chapter 9 present in 4th; introduction date unverified",e4,inferred-toc
-3,4,digital_ic_families,retained,"Standalone chapter 10 present in 4th; introduction date unverified",e4,inferred-toc
-4,5,asynchronous_logic,remove-standalone,"Standalone chapter 9 in fourth is absent from fifth TOC",e4+e5,inferred-toc
-4,5,digital_ic_families,remove-standalone,"Standalone chapter 10 in fourth is absent from fifth TOC",e4+e5,inferred-toc
-4,5,labs,renumber,"Labs move from chapter 11 to chapter 9",e4+e5,inferred-toc
-4,5,graphic_symbols,renumber,"Graphic-symbol chapter moves from 12 to 10",e4+e5,inferred-toc
-5,6,hdl_languages,expand,"Publisher specifies Verilog plus VHDL plus SystemVerilog tracks",e6-us,verified
-5,6,rtl_chapter_8_13,replace-heading,"Other Language Features -> System Verilog—An Introduction",e5+e6-us,inferred-toc
-5,6,core_curriculum,retain,"Core 1–8 and lab/symbol chapters remain",e5+e6-us,inferred-toc
+1,2,overall,revise,"Chapters 1–7 and 10 revised; the preface reports deletions in general terms",e2-preface,verified
+1,2,deleted_topics,open,"Itemized deletions require further first-edition contents and body evidence",e1-print+e2-preface,unverified
+1,2,graphic_symbols,add,"Standalone Chapter 12 introduces ANSI/IEEE Std 91-1984 graphic symbols",e2-preface,verified
+1,2,exercises_labs,expand,"Replaced Chapter 1–7 problem sets and added three Chapter 11 experiments",e2-preface,verified
+1,2,signed_binary,add,"New signed binary section at §1-6 p. 14, between complements and codes",e1-print+e2-contents+e2-preface,verified
+1,2,map_sizes,rename-heading,"Section 3-4 heading changes from five- and six-variable maps to five-variable maps",e1-print+e2-contents,inferred-toc
+1,2,six_variable_maps,mention,"Second-edition §3-4 states the six-variable map size and presents a worked five-variable construction",e2-body,verified
+1,2,tabulation,retain,"The tabulation sequence in §§3-9–3-12 starts on p. 102 in both editions",e1-print+e2-contents,inferred-toc
+1,2,msi_pld_components,reorganize,"Chapter 5 replaces the MSI/LSI heading with MSI/PLD and groups the adder/subtractor and decoders/encoders in §§5-2 and 5-5",e1-print+e2-contents,inferred-toc
+1,2,pal,add,"Section 5-9 p. 192 adds internal PAL structure",e2-preface,verified
+1,2,state_equations,remove-heading,"First-edition §6-9 was a dedicated state-equation heading; second-edition Chapter 6 ends with §6-8",e1-print+e2-contents,inferred-toc
+1,2,state_equation_method,retain,"Second-edition §6-4 derives next-state equations and uses them to form a state table",e2-body,verified
+1,2,d_flip_flop,emphasis,"The second-edition preface reports greater use of D flip-flops in design examples",e2-preface,verified
+1,2,ram,revise,"RAM and memory decoding were rewritten in §§7-7–7-8 pp. 289 and 293",e2-contents+e2-preface,verified
+1,2,error_correction,add,"Section 7-9 p. 299 adds Hamming error-correcting codes",e2-preface,verified
+1,2,asm,retain,"Chapter 8 retains the ASM chart, timing, control implementation, multiplexers and PLA control sequence",e1-print+e2-contents,inferred-toc
+1,2,asynchronous_logic,retain,"Chapter 9 opens with introduction, analysis and latch circuits in both contents; the first-edition scan ends at §9-3",e1-print+e2-contents,inferred-toc
+1,2,gate_electrical_characteristics,add,"Section 10-2 p. 401 adds quantitative gate characteristics",e2-preface,verified
+1,2,cmos_transmission_gates,add,"Section 10-9 p. 430 introduces CMOS transmission gate circuits",e2-preface,verified
+2,3,verilog_hdl,add,"The back-cover synopsis counts nine distributed Verilog readings; the English body and Spanish translation locate them",e3+e3-body+e3-spanish,verified
+2,3,combinational_logic,reorganize,"Second-edition Chapter 4 and §§5-1–5-6 consolidate into third-edition Chapter 4",e2-contents+e3+e3-body,verified
+2,3,tabulation,remove-standalone,"Second-edition §§3-9–3-12 pp. 102–109 have no separate Chapter 3 counterpart; third-edition §3-9 covers Verilog",e2-contents+e3-body,inferred-toc
+2,3,five_variable_maps,retain,"Third-edition Chapter 3 retains five-variable maps and related exercises",e2-contents+e3-body,verified
+2,3,sequential_logic,emphasis,"Continues the second-edition emphasis on D flip-flops and retains JK and T treatments",e2-preface+e3+e3-body,verified
+2,3,memory_programmable_logic,reorganize,"Second-edition §§5-7–5-9 and §§7-7–7-9 combine in third-edition Chapter 7",e2-contents+e3+e3-body,verified
+2,3,rtl_design,rewrite,"Chapter 8 expands the ASM material into RTL design with datapath/controller modeling",e3+e3-body,verified
+2,3,laboratory,expand,"Chapter 11 adds Verilog simulation supplements in §11-19",e3+e3-body,verified
+3,4,asynchronous_logic,retained,"Standalone Chapter 9 appears in both editions",e3-body+e4-body,verified
+3,4,digital_ic_families,retained,"Standalone Chapter 10 appears in both editions",e3-body+e4-body,verified
+3,4,hdl_modeling,revise,"Fourth-edition preface reports updating syntax for IEEE 1364-2001/2005 and strengthening modeling practices",e4-preface+e4-body,verified
+3,4,asmd,expand,"Fourth-edition preface describes a systematic datapath/controller design method with ASMD charts",e4-preface+e4-body,verified
+3,4,fpga,expand,"Fourth-edition preface reports expanded FPGA coverage; see §§7.8 and 11.20",e4-preface+e4-body,verified
+3,4,verification,expand,"Fourth-edition preface reports more problems and emphasizes test plans and annotated simulations",e4-preface+e4-body,verified
+4,5,asynchronous_logic,remove-standalone,"Fourth-edition Chapter 9 has no standalone counterpart in the fifth-edition contents",e4-body+e5-body,inferred-toc
+4,5,digital_ic_families,remove-standalone,"Fourth-edition Chapter 10 has no standalone counterpart in the fifth-edition contents",e4-body+e5-body,inferred-toc
+4,5,circuit_level_topics,narrow,"Fifth-edition preface reports dropping dedicated asynchronous machines, bipolar transistors, resistor–transistor logic, diode–transistor logic and emitter-coupled circuits",e5-preface,verified
+4,5,basic_cmos,reorganize,"Basic CMOS is integrated in §2.9 p. 66 and the semiconductor appendix p. 507 retains transmission gates and Verilog switch-level modeling pp. 514–519",e5-preface+e5-body,verified
+4,5,karnaugh_maps,streamline,"Fourth §3.4 p. 81 gives a five-variable treatment; fifth Chapter 3 teaches maps through four variables and §8.5 still refers to a five-variable case",e4-body+e5-preface+e5-body,verified
+4,5,web_topics,add,"Fifth-edition preface reports end-of-chapter web search topics",e5-preface,verified
+4,5,fpga_vendor_coverage,narrow,"Fifth-edition preface reports moving from two FPGA vendors to one",e5-preface,verified
+4,5,labs,renumber,"Labs move from Chapter 11 to Chapter 9",e4-body+e5-body,inferred-toc
+4,5,asynchronous_lab,remove-standalone,"Fourth §11.19 p. 553 lists Experiment 18; fifth goes from Experiment 17 §9.18 p. 478 to Verilog and prototyping §9.19 p. 480",e4-body+e5-body,inferred-toc
+4,5,fpga_prototyping,retain,"Fourth §11.20 p. 553 already covers Verilog simulation and FPGA prototyping; the heading continues in fifth §9.19 p. 480",e4-body+e5-body,inferred-toc
+4,5,graphic_symbols,renumber,"Graphic symbols move from Chapter 12 to Chapter 10",e4-body+e5-body,inferred-toc
+5,6,hdl_languages,expand,"Global preface offers parallel Verilog and VHDL core routes with an optional SystemVerilog extension to Verilog",e6-global-print,verified
+5,6,hdl_truth_tables,add-heading,"Global §3.10 p. 154 separates HDL truth-table modeling",e5-body+e6-global-body,inferred-toc
+5,6,combinational_hdl,reorganize,"Global §§4.13–4.15 pp. 231–245 separate behavioral modeling, testbenches and simulation; fifth §4.12 already includes a simple testbench",e5-body+e6-global-body,inferred-toc
+5,6,rtl_chapter_8_13,replace-heading,"Fifth §8.13 Other Language Features p. 426 becomes Global §8.13 SystemVerilog introduction p. 549",e5-body+e6-global-body,inferred-toc
+5,6,rtl_feature_changes,reorganize,"Fifth §8.13 points to further Verilog features; Global sixth §8.13 teaches SystemVerilog types, enumerations, compilation units, procedure intent and operators",e5-body+e6-global-body,verified
+5,6,hdl_lab_heading,broaden-heading,"Global §9.19 p. 615 uses HDL in the heading where fifth §9.19 p. 480 uses Verilog HDL",e5-body+e6-global-body,inferred-toc
+5,6,core_curriculum,retain,"Chapters 1–8, lab and symbol chapters, and semiconductor appendix remain; Global appendix starts p. 640",e5-body+e6-global-body,inferred-toc

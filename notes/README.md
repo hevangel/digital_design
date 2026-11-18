@@ -16,4 +16,6 @@ Study order (each note contains a specification, calculations, trade-offs, and a
 
 Edition chapters 1–8 are the *modern common core*. Earlier chapters 9–10 about asynchronous/physical implementation are explicitly preserved. Actual chapter numbers for older editions differ, so don't equate a canonical note number with a historical page/chapter reference.
 
+Use the [edition crosswalk](../editions/README.md) to match a note to the book in hand, and the [source ledger](../editions/SOURCES.md) to identify the cited printing. The [coverage review](../review/edition-coverage.md) records the baseline and the worked additions.
+
 For every lab: (a) make a truth/transition table, (b) prove or exhaustively check a small instance, (c) simulate SV and VHDL independently, (d) compare signedness, reset, and latency, and (e) inspect synthesis netlist/timing on a real target where available. A passing RTL test is not a proof of timing closure.
