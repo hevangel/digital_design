@@ -7,7 +7,20 @@
 1. [Edition-by-edition additions, omissions, and reorganization](editions/README.md), with [machine-readable history](editions/changes.csv) and [source links](editions/SOURCES.md).
 2. [Concept notes](notes/README.md): common curriculum plus historically important topics no longer presented as standalone chapters.
 3. [HDL example index](examples/README.md): **paired SystemVerilog and VHDL** implementing the same specifications.
-4. [Running tests](tests/README.md): self-checking simulations (Icarus Verilog and GHDL), plus source-only checks where toolchains are unavailable.
+4. [Running tests](tests/README.md): coverage and setup for self-checking simulations with Icarus Verilog and GHDL.
+5. [Edition coverage review](review/edition-coverage.md): source audit and implementation record.
+
+## Browser reader
+
+Serve this repository with Node.js and open `http://127.0.0.1:4181/`.
+
+```sh
+node scripts/serve.mjs
+```
+
+The reader's [entry point](index.html) renders the Markdown library and highlights SystemVerilog and VHDL examples and testbenches. Use the filter to find a document or design, and switch languages from the code view. URLs retain the selected file and section. The app uses ordinary static HTTP hosting and reads files from this checkout.
+
+The [library catalog](assets/library.json) lists the files presented in the reader. When adding a document or HDL pair, update that list. The app uses local copies of Marked 18.1.0 ([license](assets/vendor/marked.LICENSE)) and Prism 1.30.0 with its Verilog/SystemVerilog and VHDL grammars ([license](assets/vendor/prism.LICENSE)).
 
 ## Curriculum
 
@@ -25,7 +38,7 @@
 | Historical IC logic families | [10](notes/10-logic-families.md) | Open-drain modelling guidance |
 | Laboratories and symbols | [11](notes/11-labs-symbols.md) | Self-checking labs and diagrams |
 
-This is a **concept-level study companion covering the themes of all six editions**, not a claim that every individual end-of-chapter exercise or subsection has been independently recreated. The shared RTL is intentionally modern even when teaching ideas from 1984: SystemVerilog and VHDL were not languages present in the first editions.
+The companion covers common concepts and selected historical topics across all six editions. Its SystemVerilog and VHDL-2008 examples use modern HDL idioms to teach designs from earlier editions.
 
 ## Design rules
 
