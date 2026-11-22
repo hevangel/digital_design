@@ -1,0 +1,128 @@
+{
+  "ui": {
+    "viewer": "Original textbook",
+    "edition": "Edition",
+    "previous": "Previous",
+    "next": "Next",
+    "show": "Show original",
+    "hide": "Hide original",
+    "page": "PDF page {page} of {total}",
+    "pageCounter": "{page} / {total}",
+    "loading": "Loading textbook page…",
+    "failed": "Could not display this textbook page.",
+    "unmapped": "This edition has no mapped textbook page for this section."
+  },
+  "editions": [
+    { "label": "2nd edition · 1991", "file": "DigitalDesign_2nd_v2.pdf", "contents": 1 },
+    { "label": "3rd edition · 2002", "file": "DigitalDesign_3rd_2002_real.pdf", "contents": 1 },
+    { "label": "4th edition · 2007", "file": "DigitalDesign_4th_2007_full.pdf", "contents": 2 },
+    { "label": "5th edition · 2013", "file": "DigitalDesign_5th_2013.pdf", "contents": 7 },
+    { "label": "6th edition · Global", "file": "Digital_Design_6th_Edition.pdf", "contents": 6 }
+  ],
+  "aliases": {
+    "bcd_excess3": "notes/01-number-systems.md",
+    "majority3": "notes/02-boolean-algebra.md",
+    "kmap_consensus": "notes/03-minimization.md",
+    "add_sub4": "notes/04-combinational.md",
+    "mux4": "notes/04-combinational.md",
+    "sevenseg_bcd": "notes/04-combinational.md",
+    "seq1011": "notes/05-sequential.md",
+    "load_counter": "notes/06-registers.md",
+    "shift8": "notes/06-registers.md",
+    "sync_ram16x8": "notes/07-memory.md",
+    "even_parity": "notes/07-memory.md",
+    "iter_mult4": "notes/08-rtl.md",
+    "sr_nand_latch": "notes/09-asynchronous.md",
+    "open_drain": "notes/10-logic-families.md",
+    "tb_combinational": "notes/04-combinational.md",
+    "tb_sequential": "notes/05-sequential.md"
+  },
+  "sections": {
+    "notes/01-number-systems.md": {
+      "": [10, 1, 14, 19, 18],
+      "worked-check": [15, 3, 18, 24, 23],
+      "fractional-conversion-and-rounding": [15, 3, 18, 24, 23],
+      "radix-complement-subtraction": [19, 5, 23, 28, 28],
+      "ascii-with-an-agreed-parity-bit": [26, 13, 31, 36, 39],
+      "hdl-laboratory": [458, 207, 538, 470, 585]
+    },
+    "notes/02-boolean-algebra.md": {
+      "": [45, 17, 49, 56, 58],
+      "core-laws": [50, 20, 54, 61, 64],
+      "worked-derivation": [54, 21, 57, 64, 67],
+      "index-a-truth-table-and-build-a-nand-circuit": [97, 41, 102, 108, 119],
+      "hdl-laboratory": [453, 205, 532, 464, 580]
+    },
+    "notes/03-minimization.md": {
+      "": [81, 32, 83, 91, 99],
+      "five--and-six-variable-maps": [91, 37, 94, 389, 476],
+      "exact-sop-by-tabulation": [110, null, null, null, null],
+      "example-mux-equation-and-static-1-hazard": [388, 175, 465, 108, 119],
+      "hdl-laboratory": [455, 206, 534, 466, 582]
+    },
+    "notes/04-combinational.md": {
+      "": [123, 54, 135, 143, 164],
+      "method": [124, 56, 139, 147, 170],
+      "full-adder": [125, 58, 143, 151, 173],
+      "combined-addersubtractor": [163, 58, 143, 151, 173],
+      "one-digit-bcd-addition": [169, 32, 152, 162, 185],
+      "decodermuxencoder": [175, 74, 159, 168, 192],
+      "self-checking-testbench": [445, 79, 172, 182, 240],
+      "hdl-laboratory": [456, 78, 172, 182, 206]
+    },
+    "notes/05-sequential.md": {
+      "": [211, 86, 195, 208, 262],
+      "machine-design-workflow": [245, 104, 238, 254, 322],
+      "flip-flop-excitation": [242, 106, 201, 214, 270],
+      "analyze-and-reduce-a-two-flip-flop-circuit": [227, 93, 208, 222, 278],
+      "mealy-moore-and-registered-output-timing": [227, 93, 208, 222, 278],
+      "worked-example--overlapping-1011-detector": [245, 104, 238, 254, 322],
+      "hdl-laboratory": [467, 98, 220, 235, 292]
+    },
+    "notes/06-registers.md": {
+      "": [266, 109, 255, 273, 343],
+      "parallel-load-and-bidirectional-shift": [273, 110, 258, 276, 347],
+      "ring-count-and-ripple-timing": [281, 114, 266, 284, 355],
+      "verification": [470, 123, 282, 301, 373],
+      "hdl-laboratory": [470, 123, 282, 301, 373]
+    },
+    "notes/07-memory.md": {
+      "": [298, 126, 297, 317, 394],
+      "our-single-port-ram-contract": [298, 127, 298, 318, 396],
+      "decode-a-banked-address": [302, 130, 304, 325, 403],
+      "error-detection": [308, 133, 309, 330, 408],
+      "correct-a-single-bit-with-extended-hamming84": [308, 133, 309, 330, 408],
+      "implement-one-truth-table-three-ways": [189, 134, 312, 333, 411]
+    },
+    "notes/08-rtl.md": {
+      "": [316, 143, 347, 369, 446],
+      "iterative-unsigned-multiply-44--8-bits": [484, 153, 384, 409, 504],
+      "asmd-decisions-and-register-enables": [318, 148, 358, 381, 467],
+      "schedule-the-observation-phase": [321, 150, 358, 381, 467],
+      "integration-and-verification": [484, 153, 395, 420, 515],
+      "hdl-laboratory": [484, 153, 395, 420, 515]
+    },
+    "notes/09-asynchronous.md": {
+      "": [350, 157, 428, null, null],
+      "build-and-reduce-a-primitive-flow-table": [375, 171, 452, null, null],
+      "trace-a-critical-race": [383, 173, 459, null, null],
+      "hazards-are-timing-phenomena": [388, 175, 465, null, null],
+      "verification-limits": [388, 175, 465, null, null],
+      "hdl-laboratory": [486, 222, 566, 211, 265]
+    },
+    "notes/10-logic-families.md": {
+      "": [408, 182, 484, 84, 90],
+      "check-noise-margin-and-fan-out": [410, 183, 486, 84, 90],
+      "compare-output-drivers-and-switches": [439, 197, 514, 532, 648],
+      "estimate-cmos-load-power": [436, 196, 512, 525, 641],
+      "modern-flow-translation": [439, 199, 516, 532, 648],
+      "hdl-laboratory": [439, 199, 516, 532, 648]
+    },
+    "notes/11-labs-symbols.md": {
+      "": [445, 201, 524, 456, 572],
+      "how-to-read-a-schematic": [488, 224, 572, 506, 622],
+      "a-reproducible-lab-notebook": [445, 201, 524, 456, 572],
+      "proposed-experiment-sequence": [445, 201, 524, 456, 572]
+    }
+  }
+}

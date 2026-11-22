@@ -4,22 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Study digital logic across six editions with original notes and paired SystemVerilog and VHDL examples.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self' blob:; base-uri 'none'; form-action 'none'">
   <title>Digital Design Study Companion</title>
   <link rel="stylesheet" href="assets/reader.css">
   <script defer src="assets/vendor/marked.js"></script>
   <script defer src="assets/vendor/prism-core.min.js" data-manual></script>
   <script defer src="assets/vendor/prism-verilog.min.js"></script>
   <script defer src="assets/vendor/prism-vhdl.min.js"></script>
+  <script defer src="assets/textbook.js"></script>
   <script defer src="assets/reader.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <div class="workspace">
     <header class="topbar">
-      <button class="menu-toggle" type="button" aria-controls="library" aria-expanded="false">Browse</button>
       <a class="brand" href="#README.md"><span class="brand-mark" aria-hidden="true"></span>Digital Design</a>
       <span class="topbar-caption">Study companion</span>
+      <div class="topbar-actions">
+        <button class="menu-toggle" type="button" aria-controls="library" aria-expanded="true" hidden><span class="show-label"></span><span class="hide-label"></span></button>
+        <button id="toggle-textbook" type="button" aria-controls="textbook" aria-expanded="false" hidden><span class="show-label"></span><span class="hide-label"></span></button>
+      </div>
     </header>
     <aside class="library" id="library">
       <label for="find">Filter library</label>
@@ -27,20 +31,33 @@
       <nav id="navigation" aria-label="Study library"></nav>
     </aside>
     <main id="content" tabindex="-1">
-      <div class="document-bar">
-        <p id="location" class="document-location"></p>
-        <div class="actions">
-          <button id="copy" type="button" hidden>Copy code</button>
-          <a id="source" hidden>Open source</a>
+      <div class="notes-pane" id="notes-pane">
+        <div class="document-bar">
+          <p id="location" class="document-location"></p>
+          <div class="actions">
+            <button id="copy" type="button" hidden>Copy code</button>
+          </div>
         </div>
+        <nav id="languages" class="languages" aria-label="HDL language" hidden></nav>
+        <div class="reading-layout">
+          <article id="document" class="document" aria-label="Selected file"></article>
+          <nav id="outline" class="outline" aria-label="On this page" hidden></nav>
+        </div>
+        <p id="status" class="status" role="status"></p>
+        <noscript><p>Enable JavaScript to use the reader, or open the <a href="README.md">Markdown index</a> and <a href="examples/README.md">HDL example index</a>.</p></noscript>
       </div>
-      <nav id="languages" class="languages" aria-label="HDL language" hidden></nav>
-      <div class="reading-layout">
-        <article id="document" class="document" aria-label="Selected file"></article>
-        <nav id="outline" class="outline" aria-label="On this page" hidden></nav>
-      </div>
-      <p id="status" class="status" role="status"></p>
-      <noscript><p>Enable JavaScript to use the reader, or open the <a href="README.md">Markdown index</a> and <a href="examples/README.md">HDL example index</a>.</p></noscript>
+      <section id="textbook" class="textbook" hidden>
+        <div class="textbook-toolbar">
+          <select id="edition"></select>
+          <button id="previous-page" type="button" disabled></button>
+          <output id="page-number"></output>
+          <button id="next-page" type="button" disabled></button>
+        </div>
+        <div id="textbook-viewport" class="textbook-viewport" tabindex="0">
+          <p id="textbook-status" role="status" hidden></p>
+          <div id="textbook-sheet"></div>
+        </div>
+      </section>
     </main>
   </div>
 </body>

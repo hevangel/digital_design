@@ -23,6 +23,10 @@ The reader's [entry point](index.html) renders the Markdown library and highligh
 
 The [library catalog](assets/library.json) lists the files presented in the reader. When adding a document or HDL pair, update that list. The app uses local copies of Marked 18.1.0 ([license](assets/vendor/marked.LICENSE)) and Prism 1.30.0 with its Verilog/SystemVerilog and VHDL grammars ([license](assets/vendor/prism.LICENSE)).
 
+To read the original textbook, place your local PDFs in `textbooks/` under this directory, or point that folder at your local `learning/textbooks/DigitalDesign/` checkout. Use the filenames listed in the [textbook catalog](data/textbooks.json). When the reader finds a PDF, **Show original** opens the mapped page beside the notes. The two panes scroll independently and stack on narrow screens. Use **Hide Browse** to make more room for reading and **Show Browse** to reopen the library. Use the edition picker to see the same section in another available edition. **Hide original** expands the notes and keeps your reading position.
+
+The catalog lists one-based PDF page numbers in edition order. Its source files are identified in the [evidence ledger](editions/SOURCES.md). The third-edition scan uses two printed pages per PDF page. A null entry indicates that there is no mapped reading in that edition. Keep the PDFs in the local checkout. The reader uses PDF.js 5.4.624 ([license](assets/vendor/pdfjs/LICENSE)) to render pages on demand and retain opened editions until the reader is reloaded.
+
 ## Curriculum
 
 | Topic | Original notes | Representative implementation |
